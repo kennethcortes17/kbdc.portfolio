@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0d151c',
+                        cardBg: '#131f26',
+                        cardBorder: '#1c2e38',
+                        accentTeal: '#4fd1c5',
+                        btnBg: '#1b2f3a',
+                        btnText: '#a5f3fc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0d151c;
+            background-image: radial-gradient(circle at 70% 20%, #112d32 0%, #0d151c 60%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0d151c;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #1c2e38;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="text-zinc-300 font-sans min-h-screen p-4 md:p-8 custom-scrollbar">
+
+    <!-- Top Navigation & Header -->
+    <div class="max-w-[1600px] mx-auto w-full">
+        <header class="flex flex-col sm:flex-row justify-between items-center mb-12 gap-4">
+            <h1 class="text-2xl font-bold text-white tracking-wide">Kenneth's Portfolio</h1>
+            <nav class="flex items-center space-x-6 text-sm text-zinc-400">
+                <a href="#" class="text-cyan-400 font-medium">Home</a>
+                <a href="#" class="hover:text-white transition-colors">About</a>
+                <a href="#" class="hover:text-white transition-colors">Projects</a>
+                <a href="#" class="hover:text-white transition-colors">Experience</a>
+                <a href="#" class="hover:text-white transition-colors">Contact</a>
+                <a href="#" class="border border-zinc-700 px-4 py-1.5 rounded-lg text-white hover:bg-zinc-800 transition-colors bg-opacity-20 bg-black">Hire Me</a>
+            </nav>
+        </header>
+
+        <!-- Hero Description Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12 items-center">
+            <div class="lg:col-span-2 space-y-4">
+                <h2 class="text-2xl md:text-3xl font-medium text-zinc-300 leading-snug">
+                    Content Moderator | QA Analyst | Coach | Lead Qualification | <br class="hidden md:inline">Workforce Scheduler | Admin Assistant
+                </h2>
+                <p class="text-zinc-400 text-sm md:text-base leading-relaxed max-w-5xl">
+                    Experienced Content Moderator with 3 years in remote setup and 8 years in the BPO industry, adept at managing non-voice accounts, client relations, coaching, quality analysis, and workforce planning, with strong skills in data management and proficiency in Microsoft Word, Excel, and Google Sheets.
+                </p>
+            </div>
+            <div class="flex justify-center lg:justify-end">
+                <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-zinc-800/50 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Kenneth" class="w-full h-full object-cover grayscale-[10%] brightness-95">
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Workspace Dual Column Grid Split -->
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 items-start">
+            
+            <!-- LEFT HALF: Featured Projects -->
+            <div>
+                <div class="flex items-center space-x-2 text-xl font-semibold text-white mb-6">
+                    <span>Featured Projects</span>
+                    <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- 1. Calendar Automation -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-2 mb-3 h-28 flex flex-col justify-between overflow-hidden">
+                                <div class="grid grid-cols-7 gap-1 text-[8px] text-zinc-600 font-mono text-center">
+                                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                                    <span class="bg-cyan-950/40 text-cyan-400 p-0.5 rounded">1</span><span class="p-0.5">2</span><span class="p-0.5">3</span><span class="p-0.5 bg-zinc-800 rounded">4</span><span class="p-0.5">5</span><span class="p-0.5">6</span><span class="p-0.5">7</span>
+                                    <span class="p-0.5">8</span><span class="p-0.5 bg-cyan-950/40 text-cyan-400 p-0.5 rounded">9</span><span class="p-0.5">10</span><span class="p-0.5">11</span><span class="p-0.5">12</span><span class="p-0.5 bg-zinc-800 rounded">13</span><span class="p-0.5">14</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Calendar Automation</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Content moderator : automatically automatically populated events inth...</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">Googis Sheets, Apps Script</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Data Entry Form -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-3 mb-3 h-28 flex flex-col justify-center space-y-1.5 overflow-hidden">
+                                <div class="h-2 w-12 bg-zinc-700 rounded-sm"></div>
+                                <div class="h-4 w-full bg-zinc-800 border border-zinc-700/50 rounded-sm"></div>
+                                <div class="h-2 w-16 bg-zinc-700 rounded-sm"></div>
+                                <div class="h-4 w-full bg-zinc-800 border border-zinc-700/50 rounded-sm"></div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Data Entry Form</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Clean fntry forro with validates and validation and validation UI.</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">SQL, Data Validation</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- 3. Inventory Tracker -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-2 mb-3 h-28 flex flex-col justify-between overflow-hidden text-[9px] font-mono text-zinc-500">
+                                <div class="flex justify-between border-b border-zinc-800 pb-1"><span>Item</span><span>Stock</span><span>Status</span></div>
+                                <div class="flex justify-between text-zinc-400"><span>Asset_01</span><span>142</span><span class="text-emerald-500">OK</span></div>
+                                <div class="flex justify-between text-zinc-400"><span>Asset_02</span><span>12</span><span class="text-amber-500">LOW</span></div>
+                                <div class="flex justify-between text-zinc-400"><span>Asset_03</span><span>89</span><span class="text-emerald-500">OK</span></div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Inventory Tracker</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Simple data board ialts are odaable and loeer data stock levels.</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">SQL, Data Validation</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- 4. Property Listings -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-2 mb-3 h-28 space-y-1 overflow-hidden text-[9px] font-mono">
+                                <div class="bg-zinc-900 p-1 rounded border border-zinc-800 text-zinc-400 flex justify-between"><span>Unit 4B - Condo</span><span class="text-cyan-400">$2,400</span></div>
+                                <div class="bg-zinc-900 p-1 rounded border border-zinc-800 text-zinc-400 flex justify-between"><span>Studio Room 12</span><span class="text-cyan-400">$1,150</span></div>
+                                <div class="bg-zinc-900 p-1 rounded border border-zinc-800 text-zinc-400 flex justify-between"><span>Commercial Lot</span><span class="text-cyan-400">$9,800</span></div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Property Listings</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Content moderator, coach, Lead qualification workforce scheduler...</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">Toole Ueed</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- 5. Dynamic Searchbox -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-2 mb-3 h-28 flex flex-col space-y-2 overflow-hidden">
+                                <div class="bg-zinc-900 border border-zinc-700/60 rounded px-1.5 py-0.5 text-[9px] text-zinc-500 font-mono">Search..</div>
+                                <div class="h-10 border-t border-zinc-800 pt-1 space-y-1">
+                                    <div class="h-2 w-3/4 bg-zinc-800 rounded"></div>
+                                    <div class="h-2 w-1/2 bg-zinc-800 rounded"></div>
+                                    <div class="h-2 w-2/3 bg-zinc-800 rounded"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Dynamic Searchbox</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Search searchbox, and file filtering a live-filtering data table, with nun...</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">Toole Ueed</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- 6. Barcode Generator -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-white border border-zinc-200 rounded-lg p-2 mb-3 h-28 flex flex-col items-center justify-center overflow-hidden">
+                                <div class="w-28 h-10 flex items-center bg-transparent space-x-0.5">
+                                    <div class="w-1 h-full bg-black"></div><div class="w-0.5 h-full bg-black"></div><div class="w-1.5 h-full bg-black"></div><div class="w-0.5 h-full bg-black"></div><div class="w-2 h-full bg-black"></div><div class="w-1 h-full bg-black"></div><div class="w-0.5 h-full bg-black"></div><div class="w-1.5 h-full bg-black"></div><div class="w-1 h-full bg-black"></div>
+                                </div>
+                                <span class="text-[8px] text-black font-mono tracking-widest mt-1">8 123459 989731 5</span>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Barcode Generator</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v1m6 11h.01M9 21h6a2 2 0 002-2V5a2 2 0 00-2-2H9a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Actual clear barcode rage and clear barcode image ancode.</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">Toole Ueed</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT HALF: Moderation & QA Systems -->
+            <div>
+                <div class="text-xl font-semibold text-white mb-6">Moderation & QA Systems</div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <!-- 1. Attendance Tracker -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-2 mb-3 h-28 flex flex-col justify-between overflow-hidden text-[9px] font-mono text-zinc-500">
+                                <div class="flex items-center space-x-1.5 text-zinc-400"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div><span>Alhuderes Fadar</span></div>
+                                <div class="space-y-1 pt-1 border-t border-zinc-900">
+                                    <div class="flex justify-between"><span>Vinc</span><span class="text-emerald-400">✓</span></div>
+                                    <div class="flex justify-between"><span>Meni</span><span class="text-emerald-400">✓</span></div>
+                                    <div class="flex justify-between"><span>Roki</span><span class="text-zinc-600">3216</span></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Attendance Tracker</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Attendance tracker into succest to Attendance ✓ Totals.</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">Google Sheets, Apps Script</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Property Listings (Map view version) -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-1 mb-3 h-28 relative overflow-hidden bg-[radial-gradient(#2a3b4c_1px,transparent_1px)] [background-size:12px_12px]">
+                                <div class="absolute top-2 left-2 bg-zinc-900 border border-zinc-700 text-[7px] px-1 rounded font-mono text-zinc-400">All Maps</div>
+                                <div class="absolute top-6 left-8 text-cyan-400 animate-bounce"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg></div>
+                                <div class="absolute top-12 right-12 text-cyan-400 animate-bounce"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg></div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Property Listings</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">Property Listings with einss with custom pinss and filters.</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">Google Sheets, Apps Script</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+
+                    <!-- 3. Project Progress Bar -->
+                    <div class="bg-cardBg border border-cardBorder rounded-xl p-4 flex flex-col justify-between">
+                        <div>
+                            <div class="bg-zinc-950/40 border border-zinc-800/60 rounded-lg p-3 mb-3 h-28 flex flex-col justify-center space-y-3 overflow-hidden">
+                                <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-emerald-500 to-teal-400 h-full w-4/5"></div></div>
+                                <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-purple-500 to-indigo-400 h-full w-2/3"></div></div>
+                                <div class="w-full bg-zinc-800 h-1.5 rounded-full overflow-hidden"><div class="bg-gradient-to-r from-cyan-500 to-blue-400 h-full w-11/12"></div></div>
+                            </div>
+                            <div class="flex justify-between items-start">
+                                <h4 class="text-white font-medium text-sm">Project Progress Bar</h4>
+                                <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z"></path></svg>
+                            </div>
+                            <p class="text-xs text-zinc-400 mt-1.5 leading-relaxed">An actual progress visualization visual progress visualization.</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="text-[10px] font-mono text-zinc-500 block">Tools Used</span>
+                            <span class="text-xs text-zinc-400 font-mono">SQL, Data Validation</span>
+                            <button class="w-full bg-btnBg hover:bg-zinc-800 text-btnText text-xs font-medium py-1.5 rounded-lg mt-3 transition-colors">View Project</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Block: Contact Me Area -->
+                <div class="bg-cardBg border border-cardBorder rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden">
+                    <div class="space-y-1.5 max-w-md">
+                        <h3 class="text-white font-bold text-lg">Contact Me</h3>
+                        <p class="text-xs text-zinc-400 leading-relaxed">Feel free to reach out for collaboration or career opportunities.</p>
+                    </div>
+                    <div class="flex flex-col space-y-2.5 font-mono text-xs w-full md:w-auto">
+                        <a href="mailto:kennethcortes17@gmail.com" class="flex items-center space-x-3 text-zinc-300 hover:text-cyan-400 transition-colors">
+                            <svg class="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span>kennethcortes17@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kenneth-brian-d-cortes-514078189/" target="_blank" class="flex items-center space-x-3 text-zinc-300 hover:text-cyan-400 transition-colors">
+                            <svg class="w-4 h-4 text-zinc-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span>https://www.kennethancsportfolio</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sticky Floating Utilities Footer Row Elements -->
+        <footer class="mt-12 pt-6 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-zinc-600 text-xs">
+            <div>&copy; 2026 Kenneth's Operations Portfolio.</div>
+            <div class="flex items-center space-x-4 text-zinc-500 text-lg">
+                <!-- GitHub -->
+                <a href="#" class="hover:text-white transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path></svg></a>
+                <!-- Twitter/X -->
+                <a href="#" class="hover:text-white transition-colors"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                <!-- Behance -->
+                <a href="#" class="hover:text-white transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 11.002H18v1h4v-1zm.332-2.385c-.273-.432-.693-.761-1.205-.949-.514-.191-1.137-.285-1.859-.285-.758 0-1.42.106-1.979.317-.558.211-1.018.521-1.377.925-.357.404-.627.893-.807 1.458-.182.564-.271 1.196-.271 1.884 0 .729.096 1.385.289 1.961.192.576.479 1.064.857 1.458.379.394.848.694 1.403.896.557.202 1.191.302 1.898.302.783 0 1.457-.116 2.016-.347.56-.23 1.012-.556 1.353-.974.341-.417.587-.914.735-1.488.147-.574.221-1.197.221-1.864 0-.74-.087-1.396-.262-1.961-.174-.565-.453-1.04-.813-1.413zm-3.045 4.509c0 .416-.051.764-.153 1.037-.103.272-.252.49-.447.649-.195.16-.433.271-.711.332-.279.062-.591.093-.933.093-.322 0-.619-.033-.889-.101-.271-.067-.506-.183-.703-.346-.197-.163-.35-.386-.459-.667-.108-.281-.163-.64-.163-1.074 0-.444.053-.812.161-1.101.108-.289.264-.52.467-.692.203-.173.444-.294.723-.362.279-.068.58-.103.899-.103.351 0 .664.032.937.098.274.065.506.182.696.348.19.167.334.394.431.679.098.285.147.646.147 1.082zm-10.421-4.148c.379-.196.681-.469.905-.813.224-.344.336-.763.336-1.253 0-.533-.105-.98-.317-1.339-.211-.358-.501-.644-.868-.853-.367-.209-.8-.354-1.298-.432-.499-.078-1.034-.117-1.605-.117H2v11.23h4.945c.621 0 1.173-.047 1.655-.141.482-.094.887-.253 1.213-.477.326-.224.572-.523.738-.897.166-.374.249-.834.249-1.378 0-.599-.119-1.099-.356-1.498-.238-.4-.593-.699-1.066-.896l.019-.034zm-4.321-2.915h1.722c.433 0 .783.023 1.051.068.268.046.479.13.633.254.154.124.258.289.313.493.055.205.083.46.083.766 0 .285-.031.528-.093.728-.062.2-.164.362-.307.484-.143.121-.334.207-.573.258-.239.052-.534.077-.885.077H4.545v-3.128zm3.324 6.273c.189.117.327.279.414.484.087.205.131.464.131.777 0 .344-.035.626-.104.847-.07.221-.183.396-.341.524-.158.128-.363.217-.615.267-.252.05-.56.075-.923.075H4.545v-3.32h1.992c.387 0 .717.022.988.067.272.044.498.117.68.221l-.014.058z"/></svg></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Right Side Floating Chat Bubble and Star Decor Elements -->
+    <div class="fixed bottom-6 right-6 flex flex-col items-center space-y-2 z-50">
+        <div class="w-8 h-8 bg-zinc-800 text-cyan-400 rounded-full flex items-center justify-center shadow-lg border border-zinc-700/50 cursor-pointer hover:scale-105 transition-transform">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path></svg>
+        </div>
+        <div class="w-10 h-10 bg-zinc-900 text-zinc-400 rounded-full flex items-center justify-center shadow-lg border border-zinc-800 cursor-pointer hover:bg-zinc-800 transition-colors text-sm font-bold">
+            ?
+        </div>
+    </div>
+
+</body>
+</html>
